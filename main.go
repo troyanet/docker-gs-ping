@@ -16,7 +16,7 @@ func main() {
 	e.Use(middleware.Recover())
 
 	e.GET("/", func(c echo.Context) error {
-		return c.HTML(http.StatusOK, "Hello, Docker! <3")
+		return c.HTML(http.StatusOK, "Hello, Docker! <13")
 	})
 
 	e.GET("/ping", func(c echo.Context) error {
@@ -25,7 +25,7 @@ func main() {
 
 	httpPort := os.Getenv("HTTP_PORT")
 	if httpPort == "" {
-		httpPort = "8080"
+		httpPort = "8090"
 	}
 
 	e.Logger.Fatal(e.Start(":" + httpPort))
